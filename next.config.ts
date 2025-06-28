@@ -3,7 +3,7 @@ import withPWA from 'next-pwa';
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['images.unsplash.com', 'source.unsplash.com'],
+    domains: ['res.cloudinary.com','images.unsplash.com', 'source.unsplash.com'],
   },
 };
 
