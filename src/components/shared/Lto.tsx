@@ -536,6 +536,141 @@ const questions = [
     explanation:
       "Ang pag-inom ng alak ay nagpapabagal ng reaksyon, nagpapahina ng paghusga, at nagbibigay ng maling kumpiyansa sa sarili, kaya't delikado ito sa pagmamaneho.",
   },
+  {
+    id: 50,
+    question: "Kapag lumiko sa isang sangandaan, kailangan mo bang magbigay daan sa mga taong naglalakad?",
+    options: [
+      "Oo, ang driver na liliko sa kaliwa o kanan ay dapat magbigay daan sa taong naglalakad",
+      "Oo, kapag paliko lamang sa kanan",
+      "Oo, kapag paliko lamang sa kaliwa",
+    ],
+    correctAnswer: 0, // Option A is correct (green highlighted)
+    explanation:
+      "Ang driver na liliko sa kaliwa o kanan ay palaging dapat magbigay daan sa mga pedestrian para sa kanilang kaligtasan.",
+  },
+  {
+    id: 51,
+    question: "Ang isang solong buong dilaw na ilaw ay nangangahulugang:",
+    options: [
+      "pinahihintulutan ang pagdaan / pag-overtake",
+      "pagdaan / pag-o-overtake ay hindi pwede",
+      "pagdaan / pag-o-overtake ay maaaring gawin kahit kailan",
+    ],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation:
+      "Ang isang solong buong dilaw na ilaw ay nangangahulugang hindi pinapayagan ang pagdaan o pag-overtake para sa kaligtasan.",
+  },
+  {
+    id: 52,
+    question: "Lumapit ka sa isang kantong hindi gumagana ang mga ilaw ng trapiko, isang traffic enforcer ang nagbigay ng signal na ito. Dapat mong:",
+    image: "/images/52.png",
+    options: [
+      "huminto sa linya ng paghinto",
+      "iiwan lang",
+      "itigil ang antas sa braso ng nakakasakit",
+    ],
+    correctAnswer: 0, // Option A is correct (green highlighted)
+    explanation:
+      "Kapag ang traffic enforcer ay nagbigay ng signal na huminto, dapat kang huminto sa linya ng paghinto para sumunod sa batas trapiko.",
+  },
+  {
+    id: 53,
+    question: "Ito ay traffic sign na octagonal ang hugis:",
+    options: [
+      "paradahan",
+      "lugar ng sakayan at babaan",
+      "babala ng pagtigil",
+    ],
+    correctAnswer: 2, // Option C is correct (green highlighted)
+    explanation:
+      "Ang octagonal na traffic sign ay nangangahulugang 'STOP' o babala ng pagtigil.",
+  },
+  {
+    id: 54,
+    question: "Ano ang ibig sabihin ng senyas trapiko na ito?",
+    image: "/images/54.png",
+    options: [
+      "Paisa-isang sasakyan lamang ang maaaring dumaan",
+      "Bawal pumasok lahat ng klase ng sasakyan",
+      "Dumiretso sa unahan at lumiko sa interseksyon",
+    ],
+    correctAnswer: 1, // Option B is correct
+    explanation:
+      "Ang senyas na ito ay nangangahulugang 'No Entry' o bawal pumasok ang lahat ng klase ng sasakyan.",
+  },
+  {
+    id: 55,
+    question: "Ayon sa R.A. 4136, alin sa mga sumusunod ang maksimum na nararapat na bilis sa mga malawak na pambansang kalsada?",
+    options: [
+      "80 km/oras",
+      "100 km/oras",
+      "60 km/oras",
+    ],
+    correctAnswer: 0, // Option A is correct (green highlighted)
+    explanation:
+      "Ayon sa R.A. 4136, ang maksimum na bilis sa malawak na pambansang kalsada ay 80 km/oras.",
+  },
+  {
+    id: 56,
+    question: "Sino ang pangunahing may karapatan sa daan?",
+    options: [
+      "Truck ng bumbero na may ilaw at sirena na papunta sa emergency",
+      "Malalaking bus",
+      "Articulated truck",
+    ],
+    correctAnswer: 0, // Option A is correct (green highlighted)
+    explanation:
+      "Ang mga emergency vehicles tulad ng truck ng bumbero na may ilaw at sirena ay may pangunahing karapatan sa daan.",
+  },
+  {
+    id: 57,
+    question: "Ano ang kailangan mong gawin kung masundan mo ang truck na may ganitong kumukurap-kurap na senyas sa kaniyang likuran?",
+    image: "/images/57.png",
+    options: [
+      "Magmaneho papalayo sa truck",
+      "Dumaan sa kanang linya",
+      "Dumaan sa kaliwang linya",
+    ],
+    correctAnswer: 2, // Option C is correct (green highlighted)
+    explanation:
+      "Kapag nakita mo ang senyas na ito sa likod ng truck, dapat kang dumaan sa kaliwang linya.",
+  },
+  {
+    id: 58,
+    question: "Ang Premium na gasolina ay nagbibigay ng higit na kakayahan ngunit maaaring magresulta sa:",
+    options: [
+      "sobrang pagkonsumo ng langis",
+      "labis na pag-init",
+      "dumudulas na clutch",
+    ],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation:
+      "Ang paggamit ng premium na gasolina na hindi angkop ay maaaring magdulot ng labis na pag-init ng makina.",
+  },
+  {
+    id: 59,
+    question: "Sa ilalim ng batas, ano ang iba pang sanhi na maaaring makaapekto sa iyong kalagayan sa pagmamaneho maliban sa mga inuming nakalalasing?",
+    options: [
+      "Kumakain habang nagmamaneho",
+      "Mapanganib na ilegal na droga",
+      "Pakikinig sa malakas na musika",
+    ],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation:
+      "Ang paggamit ng mapanganib na ilegal na droga ay maaaring makaapekto sa iyong kakayahan sa pagmamaneho at labag sa batas.",
+  },
+  {
+    id: 60,
+    question: "Ano ang maipapayo mo sa driver na nakainom nang konti sa party?",
+    options: [
+      "Uminom ng matapang na kape at pagkatapos magmaneho pauwi",
+      "Magpahinga at huwag magmaneho",
+      "Magmaneho nang mabagal at maingat pauwi",
+    ],
+    correctAnswer: 1, // Option B is correct
+    explanation:
+      "Ang tamang payo sa driver na nakainom ay magpahinga at huwag magmaneho upang maiwasan ang aksidente at mapanatili ang kaligtasan.",
+  },
 ]
 
 export default function Component() {
