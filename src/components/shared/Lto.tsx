@@ -703,6 +703,107 @@ const questions = [
     explanation:
       'Ang tamang payo sa driver na nakainom ay magpahinga at huwag magmaneho upang maiwasan ang aksidente at mapanatili ang kaligtasan.',
   },
+  {
+    id: 61,
+    question:
+      'Anong kulay ng bandera ang kailangang ilagay para ipakita ang kargada na lumampas sa sasakyan?',
+    options: ['Dilaw', 'Berde', 'Pula'],
+    correctAnswer: 2, // Option C is correct (green highlighted)
+    explanation:
+      'Ang pulang bandera ay kailangang ilagay para ipakita ang kargada na lumampas sa sasakyan, bilang babala sa ibang motorista.',
+  },
+  {
+    id: 62,
+    question: 'Alin sa mga sumusunod ang nakalarawan?',
+    options: ['Matarik ang kalsada', 'Sirang kalsada', 'Ilog'],
+    correctAnswer: 2, // Option C is correct (green highlighted)
+    explanation:
+      'Ang larawan ay nagpapakita ng babala na may ilog o tubig sa dulo ng kalsada. Mag-ingat sa ganitong lugar.',
+    image: '/images/62.png', // Replace with actual image path
+  },
+  {
+    id: 63,
+    question: 'Kung itinuturo ng driver sa harapan mo ang kaliwang kamay nang pataas, siya ay:',
+    options: ['liliko pakanan', 'liliko pakaliwa', 'hihinto'],
+    correctAnswer: 0, // Option A is correct (green highlighted)
+    explanation:
+      'Kapag ang kaliwang kamay ng driver ay nakataas, ito ay senyas na siya ay liliko pakanan.',
+  },
+  {
+    id: 64,
+    question:
+      'Ito ang tawag sa patuloy na daloy ng hangin na kailangan upang maka-iwas ang drayber na makalanghap ng masamang amoy upang hindi ito mahilo.',
+    options: ['Paglanghap ng hangin', 'Bentilasyon ng hangin', 'Exhaust air'],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation:
+      'Ang bentilasyon ng hangin ay mahalaga upang maiwasan ng drayber ang paglanghap ng masamang amoy at hindi mahilo habang nagmamaneho.',
+  },
+  {
+    id: 65,
+    question: 'Sa linya ng paghinto bago ang tawiran ng mga tao, ang driver ay inaasahang:',
+    options: ['magpatuloy', 'huminto', 'umapak sa preno'],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation:
+      'Ang tamang gawin ng driver ay huminto sa linya ng paghinto bago ang pedestrian lane upang magbigay daan sa mga tumatawid.',
+  },
+  {
+    id: 66,
+    question: 'Kailan mo maaaring gamitin ang iyong telephono habang nagmamaneho?',
+    options: [
+      'Kapag emergency ang pagtawag',
+      'Kapag tatanggap ng tawag',
+      'Kapag nagmamaneho ng automatic na sasakyan',
+    ],
+    correctAnswer: 0, // Option A is correct (green highlighted)
+    explanation:
+      'Tanging sa emergency lamang pinapayagan ang paggamit ng telepono habang nagmamaneho upang maiwasan ang disgrasya.',
+  },
+  {
+    id: 67,
+    question: 'Paano ka dapat tumingin sa side mirror at rear view mirror habang nagmamaneho?',
+    options: [
+      'Tumingin nang matagal sa iyong salamin',
+      'Mabilis na pagsulyap',
+      'Hindi bababa sa isang beses kada minuto',
+    ],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation:
+      'Ang mabilis na pagsulyap sa mga salamin ay mahalaga upang manatiling alerto sa paligid nang hindi nawawala ang atensyon sa kalsada.',
+  },
+  {
+    id: 68,
+    question:
+      'Alin sa mga sumusunod ang hindi lamang delikado kung hindi ilegal din na gawin habang nagmamaneho?',
+    options: [
+      'Ang pagtetext o pagtawag habang nagmamaneho',
+      'Pag-aayos ng iyong mga salamin sa labas',
+      'Pakikinig ng musika',
+    ],
+    correctAnswer: 0, // Option A is correct (green highlighted)
+    explanation:
+      'Ang pagtetext o pagtawag habang nagmamaneho ay parehong delikado at ilegal ayon sa batas trapiko.',
+  },
+  {
+    id: 69,
+    question:
+      'Ang maramihang linya ng paglalakbay sa parehong direksyon ay nahahati ng anong kulay na linya sa daan?',
+    options: ['Orange', 'Pula', 'Puti'],
+    correctAnswer: 2, // Option C is correct (green highlighted)
+    explanation:
+      'Ang puting linya ang naghahati sa mga lane na may parehong direksyon ng paglalakbay.',
+  },
+  {
+    id: 70,
+    question: 'Saan ka pwedeng mag-overtake sa one-way na kalye?',
+    options: [
+      'Sa kaliwang bahagi lamang',
+      'Alin man sa kaliwa o kanan',
+      'Hindi pwedeng mag-overtake',
+    ],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation:
+      'Sa one-way na kalye, maaaring mag-overtake alinman sa kaliwa o kanan depende sa sitwasyon at kaligtasan.',
+  },
 ];
 
 function shuffleArray<T>(array: T[]): T[] {
