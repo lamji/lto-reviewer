@@ -47,7 +47,7 @@
   --radius: 0.50rem;
   --background: #fffffe;
   /* Main background */
-  --foreground: #231a2a;
+  --foreground: #ffffff;
   /* Main text color */
   --card: #fefefe;
   /* Card background */
@@ -57,7 +57,7 @@
   /* Popover background */
   --popover-foreground: #231a2a;
   /* Popover text */
-  --primary: #BF9264;
+  --primary: #000000;
   /* Primary color (buttons, highlights) */
   --primary-foreground: #fffbe6;
   /* Primary button text */
