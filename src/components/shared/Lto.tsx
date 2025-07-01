@@ -804,15 +804,561 @@ const questions = [
     explanation:
       'Sa one-way na kalye, maaaring mag-overtake alinman sa kaliwa o kanan depende sa sitwasyon at kaligtasan.',
   },
+  {
+    id: 71,
+    question: 'Alin sa mga sumusunod ang katotohanan tungkol sa mga seat belt?',
+    options: [
+      'Ang driver lang ang dapat magsuot ng seat belt',
+      'Ang pasahero sa harapan lamang ang dapat na magsuot ng seat belt',
+      'Ang lahat ng mga upuang may seat belt ay dapat gamitin nang maayos',
+    ],
+    correctAnswer: 2, // Option C is correct (green highlighted)
+    explanation:
+      'Lahat ng nakaupo sa mga upuang may seat belt ay dapat magsuot nito nang maayos para sa kaligtasan ng lahat ng sakay ng sasakyan.',
+  },
+  {
+    id: 72,
+    question: 'Saan mo makikita ang senyas trapiko na ito?',
+    options: ['Bago makarating sa tulay', 'Bago magpalit ng linya', 'Sa haligi ng tulay tawiran'],
+    correctAnswer: 2, // Option C is correct (green highlighted)
+    explanation:
+      'Ang senyas na ito ay makikita sa haligi ng tulay tawiran bilang gabay at babala sa mga motorista upang maiwasan ang banggaan sa mga haligi ng tulay.',
+    image: '/images/72.png', // Replace with actual image path
+  },
+  {
+    id: 73,
+    question: 'Ano pa ang maaaring makaapekto ng matindi sa iyong konsentrasyon bukod sa alak?',
+    options: [
+      'Ilaw ng trapiko, komportableng upuan, mahusay na disenyo ng kalsada',
+      'Mga droga, pagod at malakas na kanta, mga billboard, tinted na bintana',
+      'Nakapapawing pagod na musika, maayos na ilaw sa kalye, mga markahan ng semento',
+    ],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation:
+      'Bukod sa alak, ang mga droga, pagod, malakas na kanta, billboard, at tinted na bintana ay maaaring makaapekto sa konsentrasyon ng nagmamaneho.',
+  },
+  {
+    id: 74,
+    question: "Saang lugar madalas ipinagbabawal ang paglampas o di kaya'y paglusot?",
+    options: ['Sa mga highway', 'Sa mga highway na maraming daan o lane', 'Sa kurbada'],
+    correctAnswer: 2, // Option C is correct (green highlighted)
+    explanation:
+      'Madalas ipinagbabawal ang pag-overtake o paglusot sa mga kurbada dahil delikado at mahirap makita ang kasalubong na sasakyan.',
+  },
+  {
+    id: 75,
+    question: "Ang Student-driver's Permit ay may bisa na hanggang:",
+    options: ['anim na buwan', 'isang taon', '90 na araw'],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation:
+      "Ang Student-driver's Permit ay may bisa ng isang taon mula sa petsa ng pagkakakuha.",
+  },
+  {
+    id: 76,
+    question:
+      'Iiwanan mo ang iyong sasakyan sa kalsada, kailan mo pwedeng iwanang nakabukas ang makina?',
+    options: [
+      'Hindi mo ito iiwanang nakabukas',
+      'Kapag iiwanan mo lamang ito ng mga 5 minuto',
+      'Kapag 40 kph zone',
+    ],
+    correctAnswer: 0, // Option A is correct (green highlighted)
+    explanation:
+      'Hindi dapat iwanang nakabukas ang makina ng sasakyan kahit sa anumang sitwasyon para maiwasan ang aksidente at polusyon.',
+  },
+  {
+    id: 77,
+    question:
+      'Ano ang dapat mong gawin kung ikaw ay napipilitang magmaneho nang mabilis dahil sa mga motoristang nasa likuran mo?',
+    options: [
+      'Gamitin ang directional signal, unti-unting lumipat sa daanan ng mga sasakyang mabagal ang takbo, at hayaang makalampas ang mabibilis na sasakyan sa iyong kaliwa',
+      'Tapakan ang preno ng isa o dalawang beses habang paalis sa kalsada',
+      'Buksan ang hazard habang tumatakbo ng mabilis',
+    ],
+    correctAnswer: 0, // Option A is correct (green highlighted)
+    explanation:
+      'Ang tamang gawin ay magbigay daan sa mas mabilis na sasakyan sa pamamagitan ng tamang signal at paglipat sa tamang lane.',
+  },
+  {
+    id: 78,
+    question: 'Ang sign na ito ay laging nangangahulugan na "STOP" o hinto:',
+    options: ['pentagon', 'octagon', 'hexagon'],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation:
+      'Ang octagon na hugis ng traffic sign ay palaging nangangahulugan ng STOP o hinto.',
+  },
+  {
+    id: 79,
+    question: 'Ikaw ba ay pwedeng lumiko pakanan sa isang pulang signal?',
+    options: [
+      'Oo, ito ay isang "protektado" na pagliko, kaya magkakaroon ka ng tamang daan',
+      'Oo, magagawa mo lamang pagkatapos na huminto at magbigay daan sa trapiko',
+      'Oo, magagawa mo lamang ito kung pinapayagan ka ng isang senyas na gawin ito',
+    ],
+    correctAnswer: 2, // Option C is correct (green highlighted)
+    explanation:
+      'Ang pagliko pakanan sa pulang ilaw ay pinapayagan lamang kung may senyas na nagpapahintulot dito. Kung wala, ito ay bawal.',
+  },
+  {
+    id: 80,
+    question: 'Kailan ka dapat ganap na huminto?',
+    options: [
+      'Kapag dilaw na traffic light na kumikisap-kisap',
+      'Kapag naka-ilaw na ang pulang traffic light',
+      'Kapag nasa interseksyon',
+    ],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation:
+      'Dapat kang ganap na huminto kapag ang pulang traffic light ay naka-ilaw bilang pagsunod sa batas trapiko.',
+  },
+  {
+    id: 81,
+    question:
+      'Ano ang gagawin mo kung ikaw ay nakasunod sa student-driver at ito ay huminto sa interseksyon?',
+    options: [
+      'Agad silang lagpasan',
+      'Magparebolusyon sa iyong makina kapag matagal silang umandar',
+      'Magpasensya, asahang maaari silang magkamali',
+    ],
+    correctAnswer: 2, // Option C is correct (green highlighted)
+    explanation:
+      'Ang tamang gawin ay magpasensya at asahan na maaaring magkamali ang student-driver. Iwasan ang pagmamadali at bigyan sila ng pagkakataon.',
+  },
+  {
+    id: 82,
+    question: 'Ano ang ibig sabihin ng kumikislap na pulang ilaw pantrapiko?',
+    options: [
+      'Huminto sa guhit / linya ng paghinto at hintayin ang traffic enforcer',
+      'Bilisan ang takbo para maunahan ang pulang ilaw',
+      'Huminto sa guhit ng paghinto at dumiretso kung walang panganib',
+    ],
+    correctAnswer: 2, // Option C is correct (green highlighted)
+    explanation:
+      'Ang kumikislap na pulang ilaw ay nangangahulugang huminto sa guhit ng paghinto at maaari lamang dumiretso kung ligtas at walang panganib.',
+  },
+  {
+    id: 83,
+    question: 'Ano ang dapat mong gawin kapag dumadaan sa may paaralan?',
+    options: ['Bumusina', 'Pailawin ang head light', 'Bagalan ang takbo'],
+    correctAnswer: 2, // Option C is correct (green highlighted)
+    explanation:
+      'Kapag dumadaan sa paaralan, dapat bagalan ang takbo upang maiwasan ang aksidente at bigyang daan ang mga bata.',
+  },
+  {
+    id: 84,
+    question:
+      'Napansin mo na ang iyong sasakyan ay patuloy na tumatalbog kapag umaapak ka sa preno. Ano ang ibig sabihin nito?',
+    options: [
+      'Pudpod na ang mga shock absorber',
+      'Pudpod na ang mga gulong',
+      'Wala sa gitna ang manibela',
+    ],
+    correctAnswer: 0, // Option A is correct (green highlighted)
+    explanation:
+      'Ang patuloy na pagtalbog ng sasakyan kapag nagpreno ay indikasyon na pudpod na ang mga shock absorber at kailangan na itong palitan.',
+  },
+  {
+    id: 85,
+    question: 'Kapag papalapit sa tawiran, ang dapat mong gawin ay:',
+    options: [
+      'maghanda sa pagbagal at paghinto',
+      'magmabilis at dumaan ng mabilis',
+      'magmaneho lang maliban kung may taong naglalakad',
+    ],
+    correctAnswer: 0, // Option A is correct (green highlighted)
+    explanation:
+      'Kapag papalapit sa tawiran, dapat maghanda sa pagbagal at paghinto upang bigyang daan ang mga tumatawid.',
+  },
+  {
+    id: 86,
+    question: 'Ang daloy ng trapiko sa mga rotonda sa Pilipinas ay:',
+    options: ['pakanan', 'pakaliwa', 'kahit saang direksyon'],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation: 'Ang tamang daloy ng trapiko sa mga rotonda sa Pilipinas ay pakaliwa.',
+  },
+  {
+    id: 87,
+    question:
+      'Ano ang dapat mong gawin kapag nasa interseksyon at nakarinig ng sirena sa likod mo?',
+    options: [
+      'Magpatuloy sa interseksyon, pagkatapos ay gumilid, at hayaang makadaan ang sasakyang pag-emergency',
+      'Huminto at huwag gumalaw hanggat hindi nakakadaan ang sasakyang pang-emergency',
+      'Umatras, tumabi sa kanang bahagi ng kalsada, at huminto',
+    ],
+    correctAnswer: 0, // Option A is correct (green highlighted)
+    explanation:
+      'Kapag nasa interseksyon, magpatuloy muna at pagkatapos ay gumilid upang bigyang daan ang sasakyang pang-emergency.',
+  },
+  {
+    id: 88,
+    question: 'Ano ang gagawin mo kung ikaw ay nakaramdam ng pagod habang nagmamaneho?',
+    options: [
+      'Magpatuloy sa pagmamaneho pero uminom ng gamot',
+      'Maghintay hanggang maging mabuti ang pakiramdam bago magmaneho',
+      'Magmaneho nang mabagal at pindutin ang hazard warning na ilaw',
+    ],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation:
+      'Kung pagod habang nagmamaneho, huminto at magpahinga hanggang maging maayos ang pakiramdam bago ipagpatuloy ang pagmamaneho.',
+  },
+  {
+    id: 89,
+    question: 'Ano ang ibig sabihin ng kumikislap na dilaw na ilaw?',
+    options: [
+      'Tumigil, pagkatapos ay magpatuloy sa pag-iingat',
+      'Tawiran ng taong naglalakad',
+      'Magmabagal at magpatuloy ng may pag-iingat',
+    ],
+    correctAnswer: 2, // Option C is correct (green highlighted)
+    explanation:
+      'Ang kumikislap na dilaw na ilaw ay nangangahulugang magmabagal at magpatuloy ng may pag-iingat.',
+  },
+  {
+    id: 90,
+    question: 'Kailan mainam magpraktis ang mga Student driver?',
+    options: ['Sa gabi', 'Sa rush hour', 'Kahit anong oras pero dapat labis na mag-ingat'],
+    correctAnswer: 2, // Option C is correct (green highlighted)
+    explanation:
+      "Mainam magpraktis ang student driver kahit anong oras basta't labis na mag-ingat at sumunod sa mga patakaran.",
+  },
+  {
+    id: 91,
+    question: 'Alin sa mga sumusunod ang magpapahusay sa pagkonsumo ng gasolina?',
+    options: [
+      'Maikling paglalakbay na may malamig na makina tuwing gabi',
+      'Pagbabawas ng bilis, tamang pagpepreno, at pagpaplano nang maayos',
+      'Pagmamaneho sa mahigit na mababang kambyo habang bukas ang aircon',
+    ],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation:
+      'Ang pagbabawas ng bilis, tamang pagpepreno, at pagpaplano ng biyahe ay makakatulong sa mas mahusay na pagkonsumo ng gasolina.',
+  },
+  {
+    id: 92,
+    question: 'Ang tamang signal sa kamay para sa pagliko sa kanan ay:',
+    options: [
+      'kaliwang braso hawakang nakapababa, nakaturo ang kamay sa lupa',
+      'kaliwang braso baluktot sa siko, kamay nakaturo sa taas',
+      'kaliwang braso na hawakan nang diretso nang pahalang',
+    ],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation:
+      'Ang tamang hand signal para sa pagliko sa kanan ay kaliwang braso baluktot sa siko, kamay nakaturo sa taas.',
+  },
+  {
+    id: 93,
+    question:
+      'Papalapit ka sa isang kanto kung saan maraming sasakyan. Mayroong mga linya na may pagmamarka ng kalsada. Sa huling sandali napagtanto mo na ikaw ay nasa maling linya. Dapat mo:',
+    options: [
+      'pilitin na makadaan',
+      'huminto hanggang sa mabakante ang lugar',
+      'magpatuloy sa linya na iyon',
+    ],
+    correctAnswer: 2, // Option C is correct (green highlighted)
+    explanation:
+      'Kung napagtanto mong nasa maling linya ka na, magpatuloy na lang sa linya na iyon at huwag biglang lumipat upang maiwasan ang disgrasya.',
+  },
+  {
+    id: 94,
+    question:
+      'Sa R.A. 8750 o Seat Belt Act, legal ba para sa bata na wala pang anim na taong gulang ang umupo sa kandungan ng matanda sa harapang upuan ng sasakyan?',
+    options: ['Oo', 'Oo, kung wala ng bakanteng upuan sa likod', 'Hindi'],
+    correctAnswer: 2, // Option C is correct (green highlighted)
+    explanation:
+      'Ayon sa Seat Belt Act, hindi legal para sa batang wala pang anim na taong gulang na umupo sa harapan, lalo na sa kandungan ng matanda.',
+  },
+  {
+    id: 95,
+    question:
+      'Ano ang dapat mong gawin kung ang isang paparating na sasakyan ay napilitang tumawid sa gitnang linya upang hindi mabangga ang isa pang sasakyan na biglang umalis sa kaniyang lane?',
+    options: [
+      'Huwag itong pansinin sapagkat ikaw ang may karapatan sa daan',
+      'Bumusina at pailawin ang mga head light',
+      'Maging alisto o maingat, maghandang bagalan ang takbo, at magbigay ng daan',
+    ],
+    correctAnswer: 2, // Option C is correct (green highlighted)
+    explanation:
+      'Ang tamang gawin ay maging alerto, maghanda sa pagbagal, at magbigay daan upang maiwasan ang aksidente.',
+  },
+  {
+    id: 96,
+    question:
+      'Kapag nakakita ka ng ilaw pantrapiko na nagpalit mula sa dilaw, anong kulay ang dapat mong asahan na susunod?',
+    options: ['Amber', 'Pula', 'Asul'],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation: 'Pagkatapos ng dilaw na ilaw pantrapiko, ang susunod ay pula.',
+  },
+  {
+    id: 97,
+    question:
+      'Ano ang paglabag ng driver kung nagpapatakbo ito ng sasakyang kumikislap-kislap ang ilaw ng preno?',
+    options: [
+      'Ilegal na modipikasyon (Illegal modification)',
+      'Sagabal sa daan (Obstruction)',
+      'Hindi ligtas na pagmamaneho (Unsafe driving)',
+    ],
+    correctAnswer: 0, // Option A is correct (green highlighted)
+    explanation: 'Ang kumikislap-kislap na ilaw ng preno ay itinuturing na ilegal na modipikasyon.',
+  },
+  {
+    id: 98,
+    question:
+      'Kung paparada ka sa isang kalyeng pataas at walang bangketa, iayon / ipaling ang gulong patungo sa:',
+    options: ['gitna ng kalye', 'gilid ng kalye', 'dulo ng kalye'],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation:
+      'Kung paparada sa kalyeng pataas at walang bangketa, ipaling ang gulong patungo sa gilid ng kalye para sa kaligtasan.',
+  },
+  {
+    id: 99,
+    question:
+      'Maliban sa pagbukas ng iyong signal, ano ang marapat mong gawin kung patungo sa highway?',
+    options: [
+      'Bawasan ang tulin ng takbo upang makaiwas sa road crash',
+      'Itugma ang bilis sa daloy ng trapiko sa loob ng highway',
+      'Tuluyang huminto at hintaying maging maluwag at ligtas ang daanan',
+    ],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation:
+      'Dapat itugma ang bilis sa daloy ng trapiko sa highway upang makasabay ng maayos at ligtas.',
+  },
+  {
+    id: 100,
+    question:
+      'Maliban sa pagbukas ng iyong signal, ano ang marapat mong gawin kung patungo sa highway?',
+    options: [
+      'Bawasan ang tulin ng takbo upang makaiwas sa road crash',
+      'Itugma ang bilis sa daloy ng trapiko sa loob ng highway',
+      'Tuluyang huminto at hintaying maging maluwag at ligtas ang daanan',
+    ],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation:
+      'Dapat itugma ang bilis sa daloy ng trapiko sa highway upang makasabay ng maayos at ligtas.',
+  },
+  {
+    id: 101,
+    question: 'Kapag gusto mong bagalan ang takbo o huminto, dapat na:',
+    options: [
+      'bumusina',
+      'banayad na tapakan ang preno upang umilaw ang iyong brake lights',
+      'manatili sa iyong daanan o lane at huminto',
+    ],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation:
+      'Dapat banayad na tapakan ang preno upang umilaw ang brake lights at mabigyan ng babala ang mga sasakyan sa likod.',
+  },
+  {
+    id: 102,
+    question:
+      'Ayon sa R.A. 8750, ang mga bata ay dapat nakaupo sa aprobadong child restraint kung sila ay:',
+    options: ['10 taong gulang', '6 na taong gulang at pababa', '7 taong gulang'],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation:
+      'Ayon sa R.A. 8750, ang mga bata na 6 na taong gulang at pababa ay dapat nakaupo sa child restraint.',
+  },
+  {
+    id: 103,
+    question: 'Ang tamang senyas ng kamay kapag kumakanan ay:',
+    options: [
+      'ang kaliwang braso at kamay ay nakaturo sa kaliwa',
+      'ang kaliwang braso at kamay ay nakaturo sa itaas',
+      'ang kaliwang braso ay nakapababa at kamay ay nakaturo sa lupa',
+    ],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation:
+      'Ang tamang hand signal kapag kumakanan ay ang kaliwang braso at kamay ay nakaturo sa itaas.',
+  },
+  {
+    id: 104,
+    question: 'Alin sa mga sumusunod ang nakalarawan?',
+    options: ['Babala ng sangandaan', 'Istasyon ng first aid', 'Babala ng daang tren'],
+    correctAnswer: 0, // Option A is correct (green highlighted)
+    explanation:
+      'Ang larawan ay isang babala ng sangandaan, na nagpapahiwatig ng intersection sa kalsada.',
+    image: '/images/104.png', // Replace with actual image path
+  },
+  {
+    id: 105,
+    question:
+      'Ikaw ay naghahanap ng lugar kung saan pwede iparada ang iyong sasakyan. Ang lugar ay puno maliban sa puwang ng minarkahang "PWD" / Person with Disability. Ikaw ay:',
+    options: [
+      'gamitin ang mga puwang na ito kapag ang ibang lugar ay puno',
+      'hindi paparada doon maliban kung pinahihintulutan',
+      'gamitin ang paradahan may kapansanan man o wala',
+    ],
+    correctAnswer: 1, // Option B is correct (green highlighted)
+    explanation:
+      'Hindi ka dapat mag-park sa PWD slot maliban kung pinahihintulutan o ikaw ay may PWD ID.',
+  },
+  {
+    id: 106,
+    question:
+      'Totoo ba na ang student driver ay hindi hinuhuli sa anumang paglabag sa batas trapiko?',
+    options: [
+      'Totoo, ang violation ticket ay ibibigay sa nagtuturo',
+      'Hindi totoo, ang violation ticket ay ibibigay sa nag-aaral',
+      'Hindi totoo, ang violation ticket ay ibinibigay lamang sa mga propesyonal na driver ng sasakyang publiko',
+    ],
+    correctAnswer: 1, // Option B is correct
+    explanation:
+      'Hindi totoo. Ang student driver ay mananagot din sa anumang paglabag sa batas trapiko at ang violation ticket ay ibibigay sa nag-aaral.',
+  },
+  {
+    id: 107,
+    question: 'Sa pagmamaneho sa kalsada, dapat handa ang mga dokumentong ito:',
+    options: [
+      'DL at Rehistro at Insurance Policy',
+      'May bisa na DL at updated na Rehistro at insurance Policy',
+      'CPC at Fare Matrix',
+    ],
+    correctAnswer: 1, // Option B is correct
+    explanation:
+      "Dapat laging may bisa na Driver's License, updated na rehistro, at insurance policy habang nagmamaneho.",
+  },
+  {
+    id: 108,
+    question: 'Sa rotonda, alin ang may karapatan sa daan?',
+    options: [
+      'Mga sasakyan sa rotonda',
+      'Mga sasakyang paparating sa rotonda',
+      'Mga sasakyang nakaharap sa berde/law',
+    ],
+    correctAnswer: 0, // Option A is correct
+    explanation: 'Ang mga sasakyan na nasa loob na ng rotonda ang may karapatan sa daan.',
+  },
+  {
+    id: 109,
+    question:
+      'Kung bababa ang pasahero sa kotse, ano ang bahagi ng sasakyan ang pinakaligtas babaan?',
+    options: ['Kaliwang pintoan', 'Kanang pintoan', 'Likod ng sasakyan o hatchback'],
+    correctAnswer: 1, // Option B is correct
+    explanation:
+      'Ang kanang pintoan (passenger side) ang pinakaligtas babaan upang maiwasan ang panganib mula sa mga sasakyan sa kalsada.',
+  },
+  {
+    id: 110,
+    question: 'Nagmaneho ka sa expressway. Hihinto ka lamang kapag:',
+    options: [
+      'nagbaba o nagsasakay ng mga kargamento',
+      'kapag tatawag para sa emergency',
+      'magtanong ng direksyon',
+    ],
+    correctAnswer: 1, // Option B is correct
+    explanation:
+      'Sa expressway, tanging sa emergency lamang pinapayagan ang paghinto. Bawal ang huminto para magbaba, magsakay, o magtanong ng direksyon.',
+  },
+  {
+    id: 111,
+    question:
+      'Ang pagmamaneho nang nakainom o may impluwensya ng iba pang ilegal na sangkap ay labag sa batas at maaaring magresulta sa:',
+    options: [
+      'parusang mabigat na multa',
+      'habambuhay na pagbawi ng lisensya sa pagmamaneho',
+      'walang katiyakang pagkakasuspinde ng lisensya sa pagmamaneho',
+    ],
+    correctAnswer: 1, // Option B is correct
+    explanation:
+      'Ang pagmamaneho nang nakainom o may ilegal na sangkap ay maaaring magresulta sa habambuhay na pagbawi ng lisensya sa pagmamaneho bilang pinakamabigat na parusa.',
+  },
+  {
+    id: 112,
+    question: 'Ang ibig sabihin ng pulang "X" sa mga toll gate ay:',
+    options: [
+      'hindi ka maaari sa lane na ito',
+      'maaari ka sa lane na ito',
+      'kailangan mong umalis sa lane na ito',
+    ],
+    correctAnswer: 0, // Option A is correct
+    explanation:
+      'Ang pulang "X" sa toll gate ay nangangahulugang hindi ka maaaring dumaan o gumamit ng lane na iyon.',
+  },
+  {
+    id: 113,
+    question: 'Ano ang ibig sabihin ng berdeng arrow na trapikong ilaw?',
+    options: [
+      'Pwedeng tumawid ang taong naglalakad',
+      'Bawal pumunta sa direksyon ng arrow',
+      'Nagpapahintulot sa mga sasakyan na pumunta sa direksyon ng arrow',
+    ],
+    correctAnswer: 2, // Option C is correct
+    explanation:
+      'Ang berdeng arrow sa traffic light ay nagpapahintulot sa mga sasakyan na pumunta sa direksyon ng arrow.',
+  },
+  {
+    id: 114,
+    question: 'Papalapit ka sa traffic light na naka-green na ng ilang minuto. Dapat kang:',
+    options: ['maghanda sa paghinto', 'magmabilis ng sobra', 'panatilihin ang bilis'],
+    correctAnswer: 0, // Option A is correct
+    explanation:
+      'Kung matagal nang green ang traffic light, dapat maghanda sa paghinto dahil maaaring magbago na ito sa dilaw o pula.',
+  },
+  {
+    id: 115,
+    question: 'Para saan ang kaliwang linya ng tatlong linya na expressway?',
+    options: ['Mga coach lang', 'Mga sasakyang pang-emergency lang', 'Sa pag-o-overtake'],
+    correctAnswer: 2, // Option C is correct
+    explanation:
+      'Ang kaliwang linya ng expressway ay para sa pag-o-overtake ng mas mabagal na sasakyan.',
+  },
+  {
+    id: 116,
+    question:
+      'Kapag liliko ka sa sulok, ang driver ay gagamit ng pamamaraang ito sa pagmamanobra ng manibela:',
+    options: [
+      'dalawang kamay na pamamaraan',
+      'hand-over na pamamaraan',
+      'hand-to-hand na pamamaraan',
+    ],
+    correctAnswer: 1, // Option B is correct
+    explanation:
+      'Ang hand-over na pamamaraan ang tamang paraan ng pagliko sa sulok para sa mas kontroladong pagmamaneho.',
+  },
+  {
+    id: 117,
+    question: 'Ang tamang pagsuot ng 3 point seatbelt ay:',
+    options: ['sa ilalim ng balikat', 'paikot sa balikat at kandungan', 'sa ibabaw ng braso'],
+    correctAnswer: 1, // Option B is correct
+    explanation:
+      'Ang tamang pagsuot ng 3 point seatbelt ay paikot sa balikat at kandungan para sa maximum na proteksyon.',
+  },
+  {
+    id: 118,
+    question: 'Kapag inaantok ka habang nagmamaneho, ano ang dapat mong gawin?',
+    options: [
+      'Buksan ang aircon o ang bintana',
+      'Buksan ang radio nang napakalakas',
+      "Huminto, magpahinga, at kung maaari'y magpapalit muna",
+    ],
+    correctAnswer: 2, // Option C is correct
+    explanation:
+      'Ang tamang gawin kapag inaantok ay huminto, magpahinga, at kung maaari ay magpalit ng driver. Hindi sapat ang pagbukas ng aircon, bintana, o radio para mapanatili ang kaligtasan.',
+  },
+  {
+    id: 119,
+    question: 'Ano ang ibig sabihin ng senyas trapiko na ito?',
+    image: '/images/end-60.png', // Placeholder path
+    options: [
+      'Bawal pumasok ang mga sasakyang 30 taon ang edad',
+      'Pinakamababang itinakdang bilis',
+      'Katapusan ng pinakamataas na itinakdang bilis',
+    ],
+    correctAnswer: 2, // Option C is correct
+    explanation:
+      'Ang senyas na ito ay nangangahulugang katapusan ng pinakamataas na itinakdang bilis (speed limit ends).',
+  },
+  {
+    id: 120,
+    question: 'Ang anumang dami ng inuming ito ay makapagpapahamak sa iyong pagmamaneho:',
+    options: ['tubig', 'alkohol', 'pineapple juice'],
+    correctAnswer: 1, // Option B is correct
+    explanation:
+      'Kahit kaunting alkohol ay maaaring makasama sa iyong pagmamaneho dahil nakakaapekto ito sa iyong konsentrasyon, koordinasyon, at paghusga.',
+  },
 ];
 
 function shuffleArray<T>(array: T[]): T[] {
   // Fisher-Yates shuffle
   const arr = [...array];
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
   return arr;
 }
 
