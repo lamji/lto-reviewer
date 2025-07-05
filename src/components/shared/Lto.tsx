@@ -2039,7 +2039,7 @@ export default function Component() {
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
-  const [answeredQuestions, setAnsweredQuestions] = useState<number[]>([]);
+  const [answeredQuestions, setAnsweredQuestions] = useState<Array<{questionIndex: number; selectedAnswer: number}>>([]);
   const [quizCompleted, setQuizCompleted] = useState(false);
   // The questions to use for this quiz session
   const [activeQuestions, setActiveQuestions] = useState<typeof questions>([]);
@@ -2075,7 +2075,7 @@ export default function Component() {
     if (selectedAnswer === activeQuestions[currentQuestion].correctAnswer) {
       setScore(score + 1);
     }
-    setAnsweredQuestions([...answeredQuestions, currentQuestion]);
+    setAnsweredQuestions([...answeredQuestions, { questionIndex: currentQuestion, selectedAnswer: selectedAnswer }]);
   };
 
   const nextQuestion = () => {
@@ -2104,47 +2104,57 @@ export default function Component() {
   // Quiz setup screen
   if (!quizStarted) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-white p-4">
-        <div className="mx-auto w-full max-w-md space-y-6">
-          <Card className="border-0 bg-white shadow-none">
-            <CardHeader>
-              <CardTitle className="text-center text-2xl">LTO Reviewer Setup</CardTitle>
-              <CardDescription className="text-center">
-                Choose your quiz preferences
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div>
-                <label className="text-primary mb-2 block font-semibold">Number of Questions</label>
-                <div className="flex flex-wrap gap-3">
-                  {QUESTION_COUNTS.map(count => (
-                    <button
-                      key={count}
-                      className={`focus:ring-primary/50 rounded border px-4 py-2 text-lg font-bold transition-all focus:ring-2 focus:outline-none ${questionCount === count ? 'border-primary bg-primary text-white' : 'text-primary hover:bg-primary/10 border-gray-300 bg-white'}`}
-                      onClick={() => setQuestionCount(count === 'All' ? 'All' : Number(count))}
-                      type="button"
-                    >
-                      {count === 'All' ? `All (${questions.length})` : count}
-                    </button>
-                  ))}
+      <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-white to-gray-50 p-4 sm:p-6">
+        <div className="mx-auto w-full max-w-md space-y-8">
+          <div className="text-center space-y-2">
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900">LTO Reviewer</h1>
+            <p className="text-gray-500">Customize your quiz experience</p>
+          </div>
+          
+          <Card className="border-0 bg-white">
+            <CardContent className="p-6 space-y-8">
+              <div className="space-y-4">
+                <div className="space-y-3">
+                  <label className="text-sm font-medium text-gray-700">Number of Questions</label>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                    {QUESTION_COUNTS.map(count => (
+                      <button
+                        key={count}
+                        className={`relative px-3 py-3 text-sm font-medium rounded-xl transition-all duration-200 active:scale-95 ${questionCount === count 
+                          ? 'bg-primary text-white shadow-md ring-2 ring-primary/20' 
+                          : 'bg-white text-gray-700 border border-gray-200 hover:border-primary/30 hover:bg-primary/5'}`}
+                        onClick={() => setQuestionCount(count === 'All' ? 'All' : Number(count))}
+                        type="button"
+                      >
+                        {count === 'All' ? `All (${questions.length})` : count}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <label className="text-sm font-medium text-gray-700">Question Order</label>
+                  <div className="grid grid-cols-2 gap-2">
+                    {ORDER_OPTIONS.map(opt => (
+                      <button
+                        key={opt.value}
+                        className={`relative px-3 py-3 text-sm font-medium rounded-xl transition-all duration-200 active:scale-95 ${order === opt.value 
+                          ? 'bg-primary text-white shadow-md ring-2 ring-primary/20' 
+                          : 'bg-white text-gray-700 border border-gray-200 hover:border-primary/30 hover:bg-primary/5'}`}
+                        onClick={() => setOrder(opt.value as 'sequential' | 'random')}
+                        type="button"
+                      >
+                        {opt.label}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>
-              <div>
-                <label className="text-primary mb-2 block font-semibold">Order</label>
-                <div className="flex gap-3">
-                  {ORDER_OPTIONS.map(opt => (
-                    <button
-                      key={opt.value}
-                      className={`focus:ring-primary/50 rounded border px-4 py-2 text-lg font-bold transition-all focus:ring-2 focus:outline-none ${order === opt.value ? 'border-primary bg-primary text-white' : 'text-primary hover:bg-primary/10 border-gray-300 bg-white'}`}
-                      onClick={() => setOrder(opt.value as 'sequential' | 'random')}
-                      type="button"
-                    >
-                      {opt.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-              <Button className="mt-4 w-full" size="lg" onClick={handleStartQuiz}>
+
+              <Button 
+                className="w-full py-6 text-base font-semibold shadow-lg transition-all duration-200 active:scale-98" 
+                onClick={handleStartQuiz}
+              >
                 Start Quiz
               </Button>
             </CardContent>
@@ -2158,18 +2168,18 @@ export default function Component() {
     const percentage = Math.round((score / activeQuestions.length) * 100);
     const passed = percentage >= 70;
     // Find wrong answers
-    const wrongAnswers = activeQuestions
-      .map((q, idx) => ({
-        question: q,
-        userAnswer: answeredQuestions[idx] !== undefined ? answeredQuestions[idx] : null,
-        userSelected: answeredQuestions[idx] !== undefined ? answeredQuestions[idx] : null,
-        selectedAnswer: answeredQuestions[idx] !== undefined ? answeredQuestions[idx] : null,
-        index: idx,
-      }))
-      .filter(item => {
-        // If user selected wrong answer
-        return item.selectedAnswer !== null && item.selectedAnswer !== item.question.correctAnswer;
-      });
+    const wrongAnswers = answeredQuestions
+      .filter(answer => {
+        const question = activeQuestions[answer.questionIndex];
+        return answer.selectedAnswer !== question.correctAnswer;
+      })
+      .map(answer => ({
+        question: activeQuestions[answer.questionIndex],
+        userAnswer: answer.selectedAnswer,
+        userSelected: answer.selectedAnswer,
+        selectedAnswer: answer.selectedAnswer,
+        index: answer.questionIndex,
+      }));
 
     if (showWrongAnswers) {
       return (
